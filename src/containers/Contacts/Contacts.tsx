@@ -4,9 +4,9 @@ import {useEffect, useState} from "react";
 import {deleteContact, fetchContacts, fetchOneContact} from "./contactsThunk.ts";
 import Spinner from "../../components/Spinner/Spinner.tsx";
 import Modal from "../../components/Modal/Modal.tsx";
-import './Contacts.css';
 import {NavLink} from "react-router-dom";
 import ButtonSpinner from "../../components/Spinner/ButtonSpinner.tsx";
+import './Contacts.css';
 
 const Contacts = () => {
     const dispatch = useAppDispatch();
