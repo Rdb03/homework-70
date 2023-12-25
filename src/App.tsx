@@ -1,9 +1,10 @@
 import ToolBar from "./components/ToolBar/ToolBar";
 import {Route, Routes} from "react-router-dom";
 import NotFound from "./components/NotFound/NoFound";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacts from "./containers/Contacts/Contacts.tsx";
 import NewContact from "./containers/NewContact/NewContact.tsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EditContact from "./containers/EditContact/EditContact.tsx";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
                 <Route path="*" element={
                     <NotFound />
                 } />
+                <Route path="/edit-contact/:id" element={
+                    <EditContact/>
+                }/>
             </Routes>
         </main>
     </>

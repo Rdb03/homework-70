@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom";
 import {useAppDispatch, useAppSelector} from "../../app/hook.ts";
 import {selectCreateContactLoading} from "../Contacts/contactsSlice.ts";
-import {ApiContact} from "../../type";
 import {createContact, fetchContacts} from "../Contacts/contactsThunk.ts";
 import ContactForm from "../../components/ContactForm/ContactForm.tsx";
+import {ApiContact} from "../../type";
 
 const NewContact = () => {
     const navigate = useNavigate();

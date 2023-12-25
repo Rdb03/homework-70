@@ -23,3 +23,39 @@
     font-weight: bold;
     font-size: 40px;
 }
+
+.modal-photo {
+    width: 130px;
+    height: 150px;
+}
+
+.modal-info {
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.modal-info p:first-child {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contact-btn {
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 7px;
+    text-align: center;
+   border: 2px solid black;
+}
+
+.delete {
+    background-color: #d51b1b;
+}
+
+.edit {
+    background-color: #c4c409;
+    line-height: 28px;
+    text-decoration: none;
+}
+

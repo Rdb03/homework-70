@@ -1,5 +1,5 @@
 import {ApiContact, IContactMutation} from "../../type";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import ButtonSpinner from "../Spinner/ButtonSpinner.tsx";
 import './ContactForm.css';
 
@@ -21,6 +21,10 @@ const ContactForm: React.FC<Props> = ({onSubmit, existingContact = initialState,
     const [contact, setContact] = useState(existingContact);
     const [imagePreview, setImagePreview] = useState<string | null>(null);
 
+    useEffect(() => {
+        setImagePreview(contact.photo);
+    }, [contact.photo]);
+
     const changeContact = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
 
@@ -29,7 +33,6 @@ const ContactForm: React.FC<Props> = ({onSubmit, existingContact = initialState,
                 ...prev,
                 [name]: value,
             }));
-            setImagePreview(value);
         } else {
             setContact((prev) => ({
                 ...prev,
@@ -90,7 +93,6 @@ const ContactForm: React.FC<Props> = ({onSubmit, existingContact = initialState,
                     className="form-control"
                     value={contact.photo}
                     onChange={changeContact}
-                    required
                 />
                 {imagePreview ? (
                     <div className="image-preview">
